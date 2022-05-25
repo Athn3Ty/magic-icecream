@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed May 25 11:18:32 2022
+# Make data base, printed on Wed May 25 15:36:06 2022
 
 # Variables
 
@@ -27,9 +27,10 @@ WDELOBJ = $(SRC:$(SRCDIR)/%$(EXT)=$(OBJDIR)\\%.o)
 # makefile (from 'Makefile', line 14)
 OBJDIR = obj
 # environment
-I3SOCK = /run/user/1000/i3/ipc-socket.776
+I3SOCK = /run/user/1000/i3/ipc-socket.779
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-6e7dcde3-a53b-49d8-ba4b-c4774eba2ef3.sock
+ 
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-5455cc37-a50d-49d7-a455-ef12df8263b9.sock
 # environment
 VSCODE_CWD = /home/athn3ty
 # makefile (from 'Makefile', line 22)
@@ -75,7 +76,7 @@ CURDIR := /home/athn3ty/C++Projects/SIMPLELIST
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
@@ -85,13 +86,13 @@ MFLAGS = -pqrR
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # makefile (from 'main.d', line 1)
-MAKEFILE_LIST := Makefile list.d main.d
+MAKEFILE_LIST := Makefile database.d list.d main.d
 # automatic
 @F = $(notdir $@)
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 8083
+VSCODE_PID = 860
 # environment
 XDG_SESSION_TYPE = tty
 # makefile (from 'Makefile', line 11)
@@ -129,7 +130,7 @@ MOTD_SHOWN = pam
 # automatic
 ^F = $(notdir $^)
 # environment
-INVOCATION_ID = 6376225d11454c0d900589587fb70b55
+INVOCATION_ID = d94fcf0ef88a415fbc52dedd1f54b4f6
 # environment
 VSCODE_LOG_NATIVE = false
 # automatic
@@ -151,7 +152,7 @@ XDG_VTNR = 1
 # makefile
 .DEFAULT_GOAL := all
 # environment
-SYSTEMD_EXEC_PID = 684
+SYSTEMD_EXEC_PID = 686
 # makefile (from 'Makefile', line 21)
 RM = rm
 # environment
@@ -201,7 +202,7 @@ CXXFLAGS = -std=c++11 -Wall
 # makefile (from 'Makefile', line 6)
 CC = g++
 # variable set hash-table stats:
-# Load=95/1024=9%, Rehash=0, Collisions=10/157=6%
+# Load=95/1024=9%, Rehash=0, Collisions=10/154=6%
 
 # Pattern-specific Variable Values
 
@@ -209,10 +210,10 @@ CC = g++
 
 # Directories
 
-# src (device 66309, inode 3926): 5 files, no impossibilities.
-# . (device 66309, inode 3969793): 10 files, no impossibilities.
+# src (device 66309, inode 3926): 7 files, no impossibilities.
+# . (device 66309, inode 3969793): 13 files, no impossibilities.
 
-# 15 files, no impossibilities in 2 directories.
+# 20 files, no impossibilities in 2 directories.
 
 # Implicit Rules
 
@@ -235,15 +236,20 @@ cleandepw:
 #  recipe to execute (from 'Makefile', line 69):
 	$(DEL) $(DEP)
 
-obj/main.o: src/main.cpp src/include/list.h
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+obj/main.o: src/main.cpp src/main.cpp src/include/list.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'main'
+#  Last modified 2022-05-25 15:33:49.008271438
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 47):
+	$(CC) $(CXXFLAGS) -o $@ -c $<
 
 list.d: src/list.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'list'
-#  Last modified 2022-05-25 11:18:32.349296521
+ 
+#  Last modified 2022-05-25 15:36:06.219526314
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 40):
@@ -286,41 +292,38 @@ src/include/list.h:
 #  File has been updated.
 #  Successfully updated.
 
-SimpleList: obj/list.o obj/main.o
-#  Implicit rule search has not been done.
-#  Last modified 2022-05-16 20:46:49.872873462
+obj/database.o: src/database.cpp src/database.cpp src/include/database.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'database'
+#  Last modified 2022-05-25 15:33:48.431604264
 #  File has been updated.
-#  Needs to be updated (-q is set).
-# variable set hash-table stats:
- 
-# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 47):
+	$(CC) $(CXXFLAGS) -o $@ -c $<
+
+SimpleList: obj/database.o obj/list.o obj/main.o
+#  Implicit rule search has not been done.
+#  Last modified 2022-05-25 15:33:49.054938146
+#  File has been updated.
+#  Successfully updated.
 #  recipe to execute (from 'Makefile', line 36):
 	$(CC) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
+
+database.d: src/database.cpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'database'
+#  Last modified 2022-05-25 15:36:06.262859647
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 40):
+	@$(CPP) $(CFLAGS) $< -MM -MT $(@:%.d=$(OBJDIR)/%.o) >$@
 
 obj/list.o: src/list.cpp src/list.cpp src/include/list.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'list'
-#  Last modified 2022-05-16 20:46:49.556212966
+#  Last modified 2022-05-25 15:33:48.74827121
 #  File has been updated.
-#  Needs to be updated (-q is set).
-# automatic
-# @ := obj/list.o
-# automatic
-# * := list
-# automatic
-# < := src/list.cpp
-# automatic
-# + := src/list.cpp src/list.cpp src/include/list.h
-# automatic
-# % := 
-# automatic
-# ^ := src/list.cpp src/include/list.h
-# automatic
-# ? := src/list.cpp
-# automatic
-# | := 
-# variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=2/15=13%
+#  Successfully updated.
 #  recipe to execute (from 'Makefile', line 47):
 	$(CC) $(CXXFLAGS) -o $@ -c $<
 
@@ -335,14 +338,19 @@ all: SimpleList
 #  Implicit rule search has been done.
 #  File does not exist.
 #  File has been updated.
-#  Needs to be updated (-q is set).
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
+#  Successfully updated.
 
 # Not a target:
 src/list.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-16 20:51:10.378583443
+#  Last modified 2022-05-25 11:40:32.501956073
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/include/database.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-25 15:33:42.014931944
 #  File has been updated.
 #  Successfully updated.
 
@@ -357,11 +365,18 @@ cleanw:
 main.d: src/main.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'main'
-#  Last modified 2022-05-25 11:18:32.315963116
+#  Last modified 2022-05-25 15:36:06.179526316
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 40):
 	@$(CPP) $(CFLAGS) $< -MM -MT $(@:%.d=$(OBJDIR)/%.o) >$@
+
+# Not a target:
+src/database.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-25 15:33:38.788262428
+#  File has been updated.
+#  Successfully updated.
 
 .PHONY: clean cleandep cleanw cleandepw
 #  Implicit rule search has not been done.
@@ -369,19 +384,19 @@ main.d: src/main.cpp
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=17/1024=2%, Rehash=0, Collisions=0/59=0%
+# Load=21/1024=2%, Rehash=0, Collisions=0/75=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 32 / storage = 274 B / avg = 8 B
-# current buf: size = 8162 B / used = 274 B / count = 32 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 41 / storage = 380 B / avg = 9 B
+# current buf: size = 8162 B / used = 380 B / count = 41 / avg = 9 B
 
-# strcache performance: lookups = 77 / hit rate = 58%
+# strcache performance: lookups = 98 / hit rate = 58%
 # hash-table stats:
-# Load=32/8192=0%, Rehash=0, Collisions=0/77=0%
-# Finished Make data base on Wed May 25 11:18:32 2022
+# Load=41/8192=1%, Rehash=0, Collisions=0/98=0%
+# Finished Make data base on Wed May 25 15:36:06 2022
 
  
