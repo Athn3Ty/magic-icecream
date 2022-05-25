@@ -18,14 +18,30 @@ void Database::write(vector<string> list){
 
 }
 
-void:: Database::read(){
+vector<vector<string>>Database::read(){
     string line;
     ifstream db;
+
+    vector<string> userList;
     db.open("db/lists.sl");
 
     if ( db.is_open()) {
         while ( getline(db,line,'\n')){
-            cout << line << "\n";
+            if( line.front() == '#') {
+                cout << "Found a Hashtag:" << line << "\n";
+                line.erase(line.begin());
+                userList.push_back(line);
+            }
+            else if(line.front() == '%'){
+                cout << "Found a Percentage" << line << "\n";
+                mainList.push_back(userList);
+                userList.clear();
+            }
+            else{
+                cout << "Found an Item" << line << "\n";
+                userList.push_back(line);
+            }
+            
         }
     }
     else {
@@ -33,4 +49,7 @@ void:: Database::read(){
     }
 
     db.close();
+
+return mainList;
+
 }
