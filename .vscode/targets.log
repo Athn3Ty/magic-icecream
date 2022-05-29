@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed May 25 19:39:36 2022
+# Make data base, printed on Sat May 28 21:44:31 2022
 
 # Variables
 
@@ -27,15 +27,14 @@ WDELOBJ = $(SRC:$(SRCDIR)/%$(EXT)=$(OBJDIR)\\%.o)
 # makefile (from 'Makefile', line 14)
 OBJDIR = obj
 # environment
-I3SOCK = /run/user/1000/i3/ipc-socket.789
+I3SOCK = /run/user/1000/i3/ipc-socket.658
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-02bc585a-dbee-4111-80a1-c884f8011c0d.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-6968912e-8654-4605-a490-f40c64740301.sock
 # environment
 VSCODE_CWD = /home/athn3ty
 # makefile (from 'Makefile', line 22)
 DELOBJ = $(OBJ)
 # environment
- 
 WINDOWPATH = 1
 # default
 MAKE_COMMAND := make
@@ -46,7 +45,7 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
 .VARIABLES := 
 # environment
-PWD = /home/athn3ty/C++Projects/SIMPLELIST
+PWD = /home/athn3ty/C++Projects/SimpleListTut/magic-icecream
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
@@ -58,7 +57,7 @@ VSCODE_LOG_STACK = false
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = /home/athn3ty/.config/Code/CachedData/da15b6fd3ef856477bf6f4fb29ba1b7af717770d
+VSCODE_CODE_CACHE_PATH = /home/athn3ty/.config/Code/CachedData/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
 # environment
 LANG = C
 # environment
@@ -72,7 +71,7 @@ MAKEFLAGS = pqrR
 # makefile (from 'Makefile', line 20)
 DEP = $(OBJ:$(OBJDIR)/%.o=%.d)
 # makefile
-CURDIR := /home/athn3ty/C++Projects/SIMPLELIST
+CURDIR := /home/athn3ty/C++Projects/SimpleListTut/magic-icecream
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -92,7 +91,7 @@ MAKEFILE_LIST := Makefile database.d list.d main.d
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 870
+VSCODE_PID = 4841
 # environment
 XDG_SESSION_TYPE = tty
 # makefile (from 'Makefile', line 11)
@@ -108,7 +107,7 @@ DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
 # environment
-VSCODE_NLS_CONFIG = {"locale":"en-gb","availableLanguages":{},"_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # makefile
@@ -116,7 +115,7 @@ SHELL = /bin/sh
 # default
 MAKECMDGOALS := all
 # environment
-SHLVL = 4
+SHLVL = 5
 # environment
 MAKELEVEL := 0
 # default
@@ -130,7 +129,7 @@ MOTD_SHOWN = pam
 # automatic
 ^F = $(notdir $^)
 # environment
-INVOCATION_ID = 0f0e0f90b59d465da66d15ef23884cc8
+INVOCATION_ID = 8559b0a012e5426088174e5ccdf5278d
 # environment
 VSCODE_LOG_NATIVE = false
 # automatic
@@ -152,7 +151,7 @@ XDG_VTNR = 1
 # makefile
 .DEFAULT_GOAL := all
 # environment
-SYSTEMD_EXEC_PID = 696
+SYSTEMD_EXEC_PID = 534
 # makefile (from 'Makefile', line 21)
 RM = rm
 # environment
@@ -178,7 +177,7 @@ HOME = /home/athn3ty
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-4b212aeb-1.67.1-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-4b212aeb-1.67.2-main.sock
 # environment
 TERM = linux
 # makefile (from 'Makefile', line 13)
@@ -210,10 +209,10 @@ CC = g++
 
 # Directories
 
-# src (device 66309, inode 3926): 6 files, no impossibilities.
-# . (device 66309, inode 3969793): 14 files, no impossibilities.
+# src (device 65026, inode 7602510): 6 files, no impossibilities.
+# . (device 65026, inode 7341827): 13 files, no impossibilities.
 
-# 20 files, no impossibilities in 2 directories.
+# 19 files, no impossibilities in 2 directories.
 
 # Implicit Rules
 
@@ -244,7 +243,7 @@ obj/main.o: src/main.cpp src/include/list.h src/include/database.h
 list.d: src/list.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'list'
-#  Last modified 2022-05-25 19:39:36.344555905
+#  Last modified 2022-05-28 21:44:31.578037571
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 40):
@@ -261,14 +260,14 @@ cleandep:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-16 20:46:25.480023339
+#  Last modified 2022-05-28 15:59:14.135985569
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/main.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-25 17:55:27.992946772
+#  Last modified 2022-05-28 16:48:20.292833003
 #  File has been updated.
 #  Successfully updated.
 
@@ -289,7 +288,7 @@ src/include/list.h:
 obj/database.o: src/database.cpp src/database.cpp src/include/database.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'database'
-#  Last modified 2022-05-25 17:51:38.202534361
+#  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # automatic
@@ -299,6 +298,7 @@ obj/database.o: src/database.cpp src/database.cpp src/include/database.h
 # automatic
 # < := src/database.cpp
 # automatic
+ 
 # + := src/database.cpp src/database.cpp src/include/database.h
 # automatic
 # % := 
@@ -315,7 +315,7 @@ obj/database.o: src/database.cpp src/database.cpp src/include/database.h
 
 SimpleList: obj/database.o obj/list.o obj/main.o
 #  Implicit rule search has not been done.
-#  Last modified 2022-05-25 17:51:38.845858925
+#  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
@@ -326,7 +326,7 @@ SimpleList: obj/database.o obj/list.o obj/main.o
 database.d: src/database.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'database'
-#  Last modified 2022-05-25 19:39:36.387869802
+#  Last modified 2022-05-28 21:44:31.631370904
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 40):
@@ -355,14 +355,14 @@ all: SimpleList
 # Not a target:
 src/list.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-25 17:55:23.952995394
+#  Last modified 2022-05-28 19:38:27.544573597
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/include/database.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-25 17:55:24.846317971
+#  Last modified 2022-05-28 19:26:45.137894783
 #  File has been updated.
 #  Successfully updated.
 
@@ -377,8 +377,7 @@ cleanw:
 main.d: src/main.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'main'
- 
-#  Last modified 2022-05-25 19:39:36.311237522
+#  Last modified 2022-05-28 21:44:31.518037569
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 40):
@@ -387,7 +386,7 @@ main.d: src/main.cpp
 # Not a target:
 src/database.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-25 17:55:26.342966622
+#  Last modified 2022-05-28 21:03:36.977995616
 #  File has been updated.
 #  Successfully updated.
 
@@ -407,9 +406,9 @@ src/database.cpp:
 # strcache buffers: 1 (0) / strings = 41 / storage = 380 B / avg = 9 B
 # current buf: size = 8162 B / used = 380 B / count = 41 / avg = 9 B
 
-# strcache performance: lookups = 93 / hit rate = 55%
+# strcache performance: lookups = 92 / hit rate = 55%
 # hash-table stats:
-# Load=41/8192=1%, Rehash=0, Collisions=0/93=0%
-# Finished Make data base on Wed May 25 19:39:36 2022
+# Load=41/8192=1%, Rehash=0, Collisions=0/92=0%
+# Finished Make data base on Sat May 28 21:44:31 2022
 
  

@@ -2,6 +2,7 @@
 #include <vector>
 #include <fstream>
 
+
 using namespace std;
 
 class Database {
@@ -17,7 +18,7 @@ class Database {
     vector<vector<string>> mainList;
     string name;
 
-    void write(vector<string> mainList);
+    void write(vector<vector<string>> mainList);
     vector<vector<string>> read();
 
 };
